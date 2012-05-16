@@ -1,0 +1,2 @@
+class PopupsController < ApplicationController
+end
