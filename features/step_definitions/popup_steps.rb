@@ -4,7 +4,7 @@ end
 
 When /^I sign in via Facebook$/ do
   click_link 'Login'
-  sleep 1
+  sleep 2
   within_window('Log In | Facebook') do
     fill_in 'Email', :with => 'test_xmefjnz_user@tfbnw.net'
     fill_in 'Password', :with => '1292562059'
