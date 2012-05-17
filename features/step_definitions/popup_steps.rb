@@ -4,7 +4,12 @@ end
 
 When /^I sign in via Facebook$/ do
   click_link 'Login'
-  sleep 2
+
+  within_window(page.driver.window_handles.last) do
+    # ensure the popup has loaded
+    page.current_url
+  end
+
   within_window('Log In | Facebook') do
     fill_in 'Email', :with => 'test_xmefjnz_user@tfbnw.net'
     fill_in 'Password', :with => '1292562059'
