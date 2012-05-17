@@ -3,7 +3,7 @@ Given /^I have a popup$/ do
 end
 
 Then /^I should see the desired text in the popup window$/ do
-  page.within_window('My popup') do
-    page.should have_content('Hello')
+  within_window('My popup') do
+    find('p').should have_content('Hello')
   end
 end
