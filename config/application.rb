@@ -1,6 +1,8 @@
 require File.expand_path('../boot', __FILE__)
 
 require "action_controller/railtie"
+require "sprockets/railtie"
+require "jquery/rails"
 
 module T
   class Application < Rails::Application
@@ -15,6 +17,6 @@ module T
     config.filter_parameters += [:password]
 
     # Disable the asset pipeline
-    config.assets.enabled = false
+    config.assets.enabled = true
   end
 end

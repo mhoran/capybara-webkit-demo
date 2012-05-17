@@ -1,9 +1,17 @@
-Given /^I have a popup$/ do
+Given /^I click the login button$/ do
   visit root_path
 end
 
-Then /^I should see the desired text in the popup window$/ do
-  within_window('My popup') do
-    find('p').should have_content('Hello')
+When /^I sign in via Facebook$/ do
+  click_link 'Login'
+  sleep 1
+  within_window('Log In | Facebook') do
+    fill_in 'Email', :with => 'test_xmefjnz_user@tfbnw.net'
+    fill_in 'Password', :with => '1292562059'
+    click_button 'Log In'
   end
+end
+
+Then /^I should see my name$/ do
+  find('#me').should have_content('Test User')
 end

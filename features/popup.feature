@@ -2,5 +2,6 @@ Feature: Testing a Popup
 
   @javascript
   Scenario:
-    Given I have a popup
-    Then I should see the desired text in the popup window
+    Given I click the login button
+    When I sign in via Facebook
+    Then I should see my name
