@@ -6,7 +6,7 @@ gem 'json'
 
 group :test do
   gem 'cucumber-rails'
-  gem 'capybara-webkit', :git => 'git@github.com:mhoran/capybara-webkit.git'
+  gem 'capybara-webkit', github: 'thoughtbot/capybara-webkit'
 end
 
 group :test, :development do

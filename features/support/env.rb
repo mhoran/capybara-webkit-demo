@@ -31,3 +31,6 @@ Capybara.default_selector = :css
 ActionController::Base.allow_rescue = false
 
 Capybara.javascript_driver = :webkit
+
+Capybara.app_host = 'http://localhost'
+Capybara.always_include_port = true
