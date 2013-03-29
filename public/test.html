@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <script src="/assets/jquery.js"></script>
+    <script src="/assets/jquery.maskedinput.js"></script>
+    <script>
+      (function ($) {
+        $('input[data-mask]').live('focus', function () {
+          var input = $(this);
+
+          input.mask(input.attr("data-mask")).trigger('focus.mask');
+        });
+      })(jQuery);
+    </script>
+  </head>
+  <body>
+    <form>
+      <label>Input <input type="text" data-mask="9999" value="2012" /></label>
+    </form>
+  </body>
+</html>

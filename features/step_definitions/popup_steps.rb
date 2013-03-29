@@ -5,7 +5,7 @@ end
 When /^I sign in via Facebook$/ do
   click_link 'Login'
 
-  within_window('Log In | Facebook') do
+  within_window('Facebook') do
     fill_in 'Email', :with => 'test_xmefjnz_user@tfbnw.net'
     fill_in 'Password', :with => '1292562059'
     click_button 'Log In'
