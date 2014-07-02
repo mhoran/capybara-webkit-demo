@@ -6,8 +6,8 @@ gem 'json'
 
 group :test do
   gem 'cucumber-rails'
-  gem 'capybara-webkit', github: 'thoughtbot/capybara-webkit'
-  gem 'capybara', '2.1.0.beta1'
+  gem 'capybara-webkit'
+  gem 'capybara', '~> 2.3.0'
   gem 'selenium-webdriver'
 end
 

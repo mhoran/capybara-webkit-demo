@@ -3,9 +3,11 @@ Given /^I click the login button$/ do
 end
 
 When /^I sign in via Facebook$/ do
-  click_link 'Login'
+  facebook_window = window_opened_by do
+    click_link 'Login'
+  end
 
-  within_window('Facebook') do
+  within_window(facebook_window) do
     fill_in 'Email', :with => 'test_xmefjnz_user@tfbnw.net'
     fill_in 'Password', :with => '1292562059'
     click_button 'Log In'
