@@ -7,7 +7,7 @@ gem 'json'
 group :test do
   gem 'cucumber-rails'
   gem 'capybara-webkit'
-  gem 'capybara', '~> 2.3.0'
+  gem 'capybara', '~> 2.4.0'
   gem 'selenium-webdriver'
 end
 
